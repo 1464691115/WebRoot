@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.bg{
+    background-image: url('../image/chiyuanxianren.jpg');
+    background-position-x: 9px;
+    margin: 0px auto;
+}
+.bg-blur{
+    /* display: none; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* 背景模糊 */
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.login{
+    position: absolute;
+    z-index: 2;
+    top: 30%;
+    width: 400px;
+    height: 250px;
+    border: 10px solid rgba(255, 255, 255, .5);
+    /* 定位居中 */
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+.login .loginContent{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+.login .title h3{
+    padding-top: 10px;
+    text-align: center;
+    color: #fc6da2;
+}
+.login .form .am-form div:not(:last-child){
+    width: 90%;
+    margin:0px 0px 20px 15px;
+}   
+.login .form .am-form div:last-child,.login .form .am-form div:last-child .am-u-sm-10{
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+}
+.login .form .am-form div:last-child button{
+    width: 90%;
+    background-color: #fc6da2;
+    color: #fff;
+    border: none;
+}

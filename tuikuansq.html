@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/assets/css/app.css">
+    <link rel="stylesheet" href="static/assets/css/amazeui.min.css">
+    <style>
+        .am-header {
+            background-color: #fc6da2 !important;
+            box-shadow: 0px 5px 5px #999;
+        }
+
+        .am-form {
+            margin: 30px 15px;
+        }
+
+        .am-radio-inline {
+            margin-left: 20px;
+        }
+        #yuanYin{
+            height: 15%;
+            letter-spacing:3px;
+        }
+    </style>
+</head>
+
+<body>
+    <header data-am-widget="header" class="am-header am-header-default">
+        <div class="am-header-left am-header-nav">
+            <a href="#" onclick="javascript:history.go(-1);" class=""><i class="am-icon-angle-left am-icon-lg"></i></a>
+        </div>
+        <h1 class="am-header-title">
+            <a href="#title-link" class="">申请退款</a>
+        </h1>
+    </header>
+    <form action="javascript:tuiKuanAddCust()" class="am-form">
+        <fieldset>
+            <legend>请填写以下资料</legend>
+            <div class="am-form-group">
+                <input type="hidden" id="username" value="" /> <label for="doc-ipt-name-1">客户经理姓名</label> <input
+                    type="text" name="name" id="doc-ipt-name-1" pattern="[\u2e00-\u9fa5]{2,4}" title="2到4位的汉字" required>
+            </div>
+            <div class="am-form-group">
+                <label>贷款金额</label> <input type="number" min="100" name="sesame"
+                    id="doc-ipt-daikuan-1" required>
+            </div>
+            <div class="am-form-group">
+                <label>退款金额</label> <input type="number" min="100" name="sesame"
+                    id="doc-ipt-tuikuan-1" required>
+            </div>
+            <div class="am-form-group">
+                <label>开通金额</label> <input type="number" min="100" name="sesame"
+                    id="doc-ipt-kaitong-1" required>
+            </div>
+            <div class="am-form-group">
+                    <label>退款原因</label>
+                    <textarea name="yuanyin" id="yuanYin" cols="30" rows="10"></textarea>
+                </div>
+            <p>
+                <button type="submit" id="submit" class="am-btn am-btn-default">提交</button>
+            </p>
+        </fieldset>
+    </form>
+    <script src="static/js/jquery-1.8.0.min.js"></script>
+    <script src="static/assets/js/amazeui.min.js"></script>
+    <script>
+        function searchSubmit() {
+            //跳转后台处理数据完成后返回主界面
+            alert('提交成功.');
+            window.location.href = 'index1.html';
+        }
+
+        //客户提交资料
+        function tuiKuanAddCust() {
+            $.ajax({
+                type: 'post',
+                url: "UserAddCust.action",
+                async: false,
+                dataType: 'json',
+                data: {
+                    "客户经理姓名": $('#username').val(),
+                    "贷款金额": $('#doc-ipt-daikuan-1').val(),
+                    "退款金额": $('#doc-ipt-tuikuan-1').val(),
+                    "开通金额": $('#doc-ipt-kaitong-1').val(),
+                    "退款原因": $('#yuanYin').val()
+                },
+                success: function (data) {
+                    if (data > 0) {
+                        searchSubmit();
+                    } else {
+                        alert('提交失败!');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/assets/css/app.css">
+    <link rel="stylesheet" href="static/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/user.css">
+
+</head>
+
+<body>
+    <div id="ResizeDiv">
+        <header data-am-widget="header" class="am-header am-header-default">
+            <!-- <div class="am-header-left am-header-nav">
+                <a href="#left-link" class=""><i class="am-icon-angle-left am-icon-lg"></i></a>
+            </div> -->
+            <h1 class="am-header-title"><a href="#title-link" class="">登录</a></h1>
+            <!-- <div class="am-header-right am-header-nav"><a href="#right-link" class="">忘记密码</a></div> -->
+        </header>
+        <div class="user-login-from">
+
+            <fieldset>
+                <div class="am-form-group am-form-icon">
+                    <i class="am-icon-user am-icon-lg"></i>
+                    <input type="text" class="am-form-field" id="login-id" placeholder="请输入账号/手机号">
+                </div>
+
+                <div class="am-form-group am-form-icon">
+                    <i class="am-icon-lock am-icon-lg"></i>
+                    <input type="password" class="am-form-field" id="login-pawd" placeholder="请输入密码">
+                </div>
+                <button class="am-btn am-btn-secondary" id="login-submit" type="button">登录</button>
+                <button class="am-btn am-btn-secondary" id="registered-btn" type="button">注册</button>
+            </fieldset>
+
+        </div>
+    </div>
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="static/js/jquery-1.8.0.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lte IE 8 ]>
+        <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+        <script src="static/assets/js/amazeui.ie8polyfill.min.js"></script>
+        <![endif]-->
+    <script src="static/assets/js/amazeui.min.js"></script>
+    <script>
+        function Resize() {
+            var iHBody = document.body.offsetHeight,
+                iWBody = document.body.offsetWidth,
+                login = document.getElementsByClassName('user-login-from')[0],
+                ResizeDiv = document
+                .getElementById('ResizeDiv'),
+                loginStyles = window.getComputedStyle(login, "");
+            ResizeDiv.style.height = iHBody + 'px';
+            ResizeDiv.style.width = iWBody + 'px';
+
+            login.style.top = iHBody/2 + 'px';
+            login.style.left = iWBody/2 + 'px';
+            login.style.marginTop = '-' + loginStyles.height.split('px')[0] / 2 + 'px';
+            login.style.marginLeft = '-' + loginStyles.width.split('px')[0] / 2 + 'px';
+
+        }
+        Resize();
+        //当屏幕大小变动事件
+        window.onresize = function () {
+            Resize();
+        };
+
+        //验证是否注册
+        function blueruser() {
+            $.ajax({
+                type: 'post',
+                url: "blueruser.action",
+                async: false,
+                dataType: 'json',
+                data: {
+                    "UserPhone": $('#login-id').val()
+                },
+                success: function (data) {
+                    if (data > 0) {
+                        alert('此账号已注册！请更换账号！');
+                        $("#login-id").val('');
+                        $("#login-pawd").val('');
+                    } else {
+                        alert('注册成功！');
+                    }
+                }
+            });
+        }
+        //用户注册
+        document.getElementById('registered-btn').onclick = function () {
+            if ($('#login-id').val() == "" || $('#login-pawd').val() == "") {
+                alert('请输入你的用户名或密码');
+            } else {
+                $.ajax({
+                    type: 'post',
+                    url: "UserAdd.action",
+                    async: false,
+                    dataType: 'json',
+                    data: {
+                        "UserPhone": $('#login-id').val(),
+                        "Userpwd": $('#login-pawd').val()
+                    },
+                    success: function (data) {
+                        if (data > 0) {
+                            alert('注册成功！,请开始登录吧！');
+                        } else {
+                            alert('注册失败');
+                        }
+                    }
+                });
+            }
+        }
+
+        //用户登陆
+        document.getElementById('login-submit').onclick = function () {
+            $.ajax({
+                type: 'post',
+                url: "Userlogin.action",
+                async: false,
+                dataType: 'json',
+                data: {
+                    "UserPhone": $('#login-id').val(),
+                    "Userpwd": $('#login-pawd').val()
+                },
+                success: function (data) {
+                    if (data != "") {
+                        alert('登陆成功！');
+                        sessionStorage.username = data[0]['userPhone'];
+                        location.href = 'index.html';
+                    } else {
+                        alert('账号或密码错误,请重新登录！');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

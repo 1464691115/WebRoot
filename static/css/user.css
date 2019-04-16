@@ -1,0 +1,141 @@
+.am-header {
+    background-color: #fc6da2 !important;
+    border-bottom: 1px solid #fff;
+    height: 60px;
+}
+
+.am-header .am-header-left {
+    height: 100%;
+}
+
+.am-header-title {
+    padding: .6rem 0px;
+    height: 100%;
+}
+
+#ResizeDiv {
+    position: relative;
+}
+
+.user-login-from {
+    position: absolute;
+    width: 80%;
+}
+
+.user-login-from .am-form {
+    margin: 50px 50px;
+}
+
+.user-login-from .ui-input-text {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border: none;
+    padding: 10px 5px;
+    box-shadow: none;
+}
+
+.am-form-group .am-icon-lock {
+    font-size: 23px !important;
+}
+
+.user-login-from .am-form-group i {
+    font-size: 20px;
+    top: 30% !important;
+    left: .3em;
+}
+
+.am-form-field {
+    font-size: 30px !important;
+    border-bottom: 1px solid #666 !important;
+}
+
+.am-form-field:focus {
+    border: none;
+    border-bottom: 1px solid #fc6da2 !important;
+    color: #fc6da2;
+}
+
+.user-login-from .am-btn {
+    width: 48%;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+#login-submit {
+    border: none;
+    background: #fc6da2;
+}
+
+#registered-btn {
+    float: right;
+    border: 1px solid #fc6da2;
+    background: transparent;
+    color: #fc6da2;
+}
+
+/*注册表单*/
+.user-registered-from {
+    margin-top: 20px;
+}
+
+.user-registered-from .am-form-group {
+    border: solid #bababa;
+    border-width: 1px 0px;
+    padding: 10px 10px;
+    margin-bottom: 0px;
+}
+
+.user-registered-from .am-form-group .ui-input-text[type] {
+    font-size: 25px;
+    padding: 0px;
+}
+
+.user-registered-from .am-form-group label {
+    text-align: left;
+    font-size: 20px;
+    padding: 5px 18px;
+}
+
+.user-registered-from .am-form-group .am-u-sm-10>div {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-radus: none;
+    border: none;
+    margin: 0;
+}
+
+.user-registered-from .am-form-group .am-u-sm-10 {
+    width: 50%;
+    float: left;
+}
+
+#get-email {
+    font-size: 25px;
+    padding: 0px 30px;
+    border-left: 1px solid #bababa;
+    width: 30%;
+}
+
+.user-registered-from .am-form-group:last-child {
+    border: none;
+}
+
+.user-registered-from .am-form-group:last-child .am-u-sm-10 {
+    background: #fc6da2;
+    margin: 20px 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.user-registered-from button[type=submit] {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+}

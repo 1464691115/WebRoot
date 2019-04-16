@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.zhongcheng.entity">  
+    <resultMap id="customer" type="Customer">  
+        <id column="Customerid" property="Customerid"/>  
+        <result column="UserPhone" property="UserPhone"/>  
+        <result column="Userpwd" property="Userpwd"/>  
+        <result column="sex" property="sex"/>  
+        <result column="Idnumber" property="Idnumber"/>  
+        <result column="Banknumber" property="Banknumber"/>  
+        <result column="Sesame" property="Sesame"/>  
+        <result column="Credit" property="Credit"/>  
+        <result column="Isnetloan" property="Isnetloan"/>  
+        <result column="Phone" property="Phone"/>  
+        <result column="Marriage" property="Marriage"/>  
+        <result column="money" property="money"/>  
+        <result column="Usageofloan" property="Usageofloan"/>  
+        <result column="Datatime" property="Datatime"/>  
+        <result column="isTong" property="isTong"/>  
+    </resultMap>  
+</mapper>  

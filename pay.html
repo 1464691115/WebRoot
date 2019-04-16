@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Title</title>
+
+<head>
+    <link rel="stylesheet" href="static/assets/css/app.css">
+    <link rel="stylesheet" href="static/assets/css/amazeui.min.css">
+    <style>
+        #ResizeDiv{
+            background-color: #f4f4f4;
+        }
+        .am-header{
+            height: 90px;
+            font-size: 1.5em;
+            text-align: center;
+            padding: 20px 10px;
+            background-color: #fff;
+        }
+        .am-header .am-header-left{
+            margin:15px 0 0 30px;
+        }
+        .am-header .am-header-left a:active,.am-header .am-header-left a{
+            color: #000;
+        }
+        .am-header .am-header-left i::before{
+            margin-right: 30px;
+        }
+        .am-header img{
+            height: 100%;
+        }
+        .content{
+            width: 100%;
+            margin-top: 20px;
+            background-color: #fff;
+        }
+        .payQR_code{
+            width: 100%;
+            /* height: 100%; */
+        }
+        .bottomBtn{
+            background-color: #26ac3b;
+            color: #fff;
+            font-size: 1.7em;
+            text-align: center;
+            padding: 30px 35px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ResizeDiv">
+        <header class="am-header">
+            <div class="am-header-left am-header-nav">
+                <a href="index.html" class=""><i class="am-icon-angle-left am-icon-lg"></i></a>
+            </div>
+            <img src="static/image/weixin.jpg" alt="微信支付">
+        </header>
+        <div class="content">
+            <img class="payQR_code" src="" alt="">
+        </div>
+        <div class="bottomBtn">已完成支付</div>
+    </div>
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="static/js/jquery-1.8.0.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lte IE 8 ]>
+        <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+        <script src="static/assets/js/amazeui.ie8polyfill.min.js"></script>
+        <![endif]-->
+    <script src="static/js/jquery-1.8.0.min.js"></script>
+    <script src="static/assets/js/amazeui.min.js"></script>
+    <script>
+        window.onload = function () {
+            function showValf(){
+                var thisUrl = document.URL,
+                getVal = thisUrl.split('?')[1],
+                // 通过分隔符来把 'file:///E:/wangdai/pay.html?money=1'中的money=1取出来
+                showVal = parseInt(getVal.split("=")[1]),
+                image_pay = document.getElementsByClassName('content')[0],
+                image_url = "static/image/";
+                switch (showVal) {
+                    case 1:
+                        image_url += "499.jpg";
+                        break;
+                    case 2:
+                        image_url += "998.jpg";
+                        break;
+                    case 3:
+                        image_url += "1888.jpg";
+                        break;
+                    default:
+                        alert('出现错误,请重试或联系客服电话.')
+                        break;
+                }
+                // alert(image_url);
+                document.getElementsByClassName('payQR_code')[0].src = image_url;
+            }
+            showValf();
+            var submitPay = document.getElementsByClassName('bottomBtn')[0];
+            submitPay.onclick = function (){
+                alert('您的办理信息已提交,稍后会有客服人员与您进行通话确认办理信息,请注意接听.');
+                window.location.href = 'index1.html';
+            }
+        }
+    </script>
+</body>
+
+</html>

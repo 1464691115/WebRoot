@@ -1,0 +1,566 @@
+body {
+    width: 100%;
+    font-size: 2.3rem;
+}
+
+#pageone {
+    /*width: 650px;*/
+}
+
+.am-header {
+    background-color: #fc6da2 !important;
+    border-bottom: 1px solid #fff;
+    height: 60px;
+}
+.am-header .am-header-left{
+    height: 100%;
+}
+.am-header-title{
+    padding: .6rem 0px;
+    height: 100%;
+}
+.am-tabs {
+    margin: 0px;
+}
+.am-header-right{
+    top: 50% !important;
+    margin-top: -25px;
+}
+/*内容*/
+.content {
+    padding: 0px;
+}
+
+/*轮播图*/
+.swiper-container {
+    width: 100%;
+    height: 250px;
+}
+
+.swiper-container .swiper-slide {
+    text-align: center;
+}
+
+.swiper-container .swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.content-z {
+    margin-top: 10px;
+    width: 100%;
+    z-index: 5;
+}
+
+/*推荐导航栏*/
+.tuijian-navbar {
+    width: 100%;
+    padding-bottom: 10px;
+    border-style: none none solid none;
+}
+.am-tabs-bd .am-tab-panel li{
+    display: flex;
+    margin:1.5rem 2rem;
+
+}
+.am-tabs-bd .am-tab-panel li:not(:last-child) {
+    border-bottom: 1px solid #999;
+}
+
+.am-tabs-bd .am-tab-panel a {
+    display: block;
+}
+
+.am-tabs-bd .am-tab-panel .text {
+    float: right;
+    line-height: 50px;
+    margin: 5px 150px 0px 0px;
+}
+
+.am-tabs-bd .am-tab-panel .text h1 {
+    font-size: 1.8rem;
+}
+
+.am-tabs-bd .am-tab-panel img {
+    width: 150px;
+    height: 120px;
+}
+
+/*网贷平台*/
+.wd-pingtai {
+    position: relative;
+}
+
+.wd-pingtai .wd-pingtai-wrapper {
+    display: flex;
+    border-bottom: 5px solid gainsboro;
+}
+
+.wd-pingtai-d {
+    width: 25%;
+    float: left;
+    padding-right: 10px;
+}
+
+.wd-pingtai-grid {
+    display: block;
+    margin: 20px 0 10px 15px;
+}
+
+.wd-pingtai-grid p {
+    text-align: center;
+    font-size: 2.3rem;
+    line-height: 50px;
+    display: block;
+    color: #888;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.wd-pingtai-icon-c {
+    font-size: 3.1rem;
+    font-weight: normal;
+    color: #fff;
+    line-height: 46px;
+    text-align: center;
+    display: block;
+    background: #fc6da2;
+    border-radius: 50px;
+}
+
+.wd-bq {
+    padding: 10px 5px;
+    background: #fff;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.wd-bq .wd-bq-flex {
+    width: 50%;
+    line-height: 20px;
+    position: relative;
+    display: flex;
+}
+
+.wd-pingtai .wd-bq-media-list-img {
+    width: 35% !important;
+    position: relative;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.wd-pingtai .wd-bq-media-list-img img {
+    width: 100px;
+    border-radius: 50px;
+    height: 100px;
+}
+
+.wd-pingtai .wd-bq-media-content {
+    width: 72%;
+    position: relative;
+    margin: 10px 0;
+}
+
+.wd-pingtai .wd-bq-media-content h1 {
+    padding-top: 3px;
+    font-weight: 700;
+    color: #999;
+    font-size: 3rem;
+    line-height: 1.5em;
+    padding: 0 6px 3px 0;
+    font-weight: 400;
+}
+
+.wd-pingtai .wd-bq-media-content p {
+    font-size: 2rem;
+    line-height: 1.5em;
+    padding: 0 8px 0 0;
+    color: #999;
+    word-break: break-word;
+}
+
+.wd-pingtai .wd-bq-kz-app li {
+    padding: 10px;
+    margin-bottom: 1px;
+}
+
+#appendTolist li a {
+    padding: 0;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+/*信用卡申请*/
+.xyk .ui-content {
+    border-bottom: 5px solid #adadad;
+}
+
+.xyk-list {
+    display: flex;
+}
+
+.xyk-list-img-c {
+    width: 25%;
+    float: left;
+    padding-right: 15px;
+}
+
+.xyk-list-img {
+    margin: 5px 55px;
+}
+
+.xyk-list-img-c p {
+    text-align: center;
+    font-size: 2.3rem;
+    line-height: 60px;
+    color: #000;
+}
+
+.xyk-list-img-c img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.xyk .xyk-hide-btn{
+    font-size: 2.8rem;
+    margin-left: 10px;
+    display: block;
+    text-align: center;
+    font-weight: normal;
+    color: #fc6da2;
+}
+
+.xyk .xyk-list-hide {
+    display: none;
+}
+
+/*卡片类型*/
+.xyk .kptype {
+    border-bottom: 5px solid #adadad;
+}
+
+.xyk .kp-title {
+    font-size: 3.3rem;
+    border-left: 10px solid #fc6da2;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding-left: 20px;
+    margin: 10px 0 10px 30px;
+}
+
+.kptype .swiper-container22 {
+    height: 150px;
+}
+
+.xyk .spsf-list li {
+    padding: 10px;
+    margin-bottom: 1px;
+    display: flex;
+    padding: 8px;
+    margin-bottom: 10px;
+    background: #fff;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.xyk .spsf-list li a {
+    padding: 0;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.ck8-media-list-img {
+    width: 35% !important;
+    position: relative;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    text-align: center;
+    width: 25%;
+    font-size: 0;
+}
+
+.ck8-media-list-img img {
+    width: 200px;
+    height: 120px;
+    border-radius: 3px;
+    background: #fff;
+    padding-right: 10px;
+}
+
+.ck8-media-content-kp {
+    width: 63% !important;
+}
+
+.ck8-media-content {
+    position: relative;
+}
+
+.ck8-media-content span {
+    font-size: 2.8rem;
+    line-height: 1.5em;
+    padding: 0 6px 3px 0;
+    font-weight: 400;
+}
+
+.spsf-list-c span {
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: #999;
+    line-height: 20px;
+}
+
+.ck8-media-content p {
+    font-size: 2.8rem;
+    line-height: 1.5em;
+    padding: 0 8px 0 0;
+    color: #999;
+    word-break: break-word;
+    font-weight: normal;
+}
+
+.spsf-list-c .list-c {
+    width: 100%;
+    font-size: 3.3rem;
+    color: #999;
+    line-height: 22px;
+    padding: 20px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.ck8-tags>div {
+    height: 40px;
+    float: left;
+    margin: 5px;
+    line-height: 40px;
+    padding: 0 8px;
+    border-radius: 4px;
+    border: 1px solid #fc6da2;
+    color: #fc6da2;
+    font-size: 2.3rem;
+}
+
+.ck8-tags-fillet>div {
+    border-radius: 40px !important;
+    padding: 0 12px !important;
+}
+
+.ck8-tags>div {
+    border: 1px solid #3300FF !important;
+    color: #3300FF !important;
+}
+
+.user {}
+
+.user .userDisplay {
+    width: 100%;
+    height: 300px;
+    background: #fc6da2;
+    box-shadow: 0px 5px 5px #999;
+}
+
+.userImg>.am-figure {
+    float: left;
+    margin: 50px 0px 50px 70px;
+    border: none;
+}
+
+.userImg>.am-figure::after {
+    content: none;
+}
+
+.user .display {
+    float: left;
+    margin: 50px;
+}
+
+.user .display p {
+    font-size: 3rem;
+    line-height: 70px;
+    font-weight: 100;
+    color: #fff;
+}
+
+.user .userList {
+    margin-top: 20px;
+    font-size: 3.3rem;
+}
+
+.user .userList .am-list a {
+    font-weight: 100;
+    color: #000;
+    margin-left: 30px;
+}
+
+/* 底部工具栏 */
+.bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    border-top: 3px solid #fc6da2;
+    background: #fff;
+    padding: 0px 20px;
+}
+
+.bottom .nav li {
+    float: left;
+    font-size: 3rem;
+    text-align: center;
+    width: 25%;
+}
+
+.bottom .nav .active>a {
+    color: #fc6da2;
+}
+
+.bottom-weizhi {
+    background-color: transparent;
+    width: 100%;
+    height: 100px;
+}
+
+.pay {
+    position: fixed;
+    width: 70%;
+    top: -300px;
+    left: 50%;
+    margin-left: -35%;
+    margin-top: -25%;
+    z-index: 100;
+    transition: all .7s;
+}
+
+.posTop {
+    top: 50%;
+}
+
+.pay .payHeard {
+    color: #fff;
+    font-size: 2.3rem;
+    text-align: center;
+    padding: 5px 10px;
+    background: #fc6da2;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.pay .payCenter {
+    background: #fff;
+    border-radius: 0px 0px 20px 20px;
+    width: 100%;
+}
+
+.pay .pay_list {
+    padding: 20px 30px;
+    display: flex;
+}
+
+.pay .pay_list li {
+    float: left;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 5px;
+    transition: all .2s;
+}
+
+.pay .pay_list .active {
+    background-color: #fc6da2;
+    color: #fff;
+    position: relative;
+}
+
+.pay .pay_list .active::after {
+    width: 33px;
+    content: '⌛';
+    position: absolute;
+    bottom: -35px;
+    color: #fc6da2;
+    font-weight: bold;
+    left: 50%;
+    margin-left: -15px;
+    animation: active 2s linear infinite;
+}
+
+@keyframes active {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.pay .pay_list li:not(:last-child) {
+    margin-right: 15%;
+}
+
+.pay .pay_Select {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.pay .pay_Select h2 {
+    font-size: 2.6rem;
+}
+
+.pay .pay_Select .am-form-group {
+    width: 100px;
+    height: 100px;
+    margin: 0px auto;
+    padding: 20px 0;
+}
+
+.pay .pay_Select .am-radio-inline input[type=radio] {
+    width: 30px;
+    height: 30px;
+    padding: 30px;
+}
+
+.pay .select_bottom {
+    width: 100%;
+    height: 80px;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.pay .select_bottom>div {
+    float: left;
+    padding: 20px 20% 20px 20%;
+    font-size: 2.3rem;
+    color: #fc6da2;
+    width: 50%;
+}
+
+.pay .select_bottom .pay_false {
+    border-right: 1px solid #ccc;
+    color: #ccc;
+}
+
+.back {
+    z-index: 99;
+    background-color: rgba(0, 0, 0, .1);
+    width: 100%;
+    height: 105%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+
+.payReturn {
+    float: left;
+    margin-left: 3rem;
+}

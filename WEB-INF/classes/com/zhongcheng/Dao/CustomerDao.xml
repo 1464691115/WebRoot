@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhongcheng.Dao.CustomerDao">
+	<!-- 用户注册 -->
+	<insert id="Useradd">
+		INSERT INTO
+		customer(userphone,userpwd,name,sex,idnumber,banknumber,sesame,credit,isnetloan,phone,marriage,money,usageofloan,datatime,isTong)
+		VALUES
+		(#{arg0},#{arg1},'无','无','无','无','0','无','无','无','无','0','无','无',0);
+	</insert>
+
+	<!-- 用户登陆 -->
+	<select id="UserLogin" resultType="com.zhongcheng.entity.Customer">
+		select * from Customer where userphone=#{arg0} and userpwd=#{arg1}
+	</select>
+
+	<!-- 用户提交资料 -->
+	<update id="UseraddCust">
+		UPDATE customer set
+		name=#{arg0},sex=#{arg1},Idnumber=#{arg2},Banknumber=#{arg3},sesame=#{arg4},credit=#{arg5},Isnetloan=#{arg6},Phone=#{arg7},Marriage=#{arg8},Money=#{arg9},Usageofloan=#{arg10},Datatime=#{arg11},isTong=2
+		where UserPhone=#{arg12}
+	</update>
+
+	<!-- 查询除了name带无之外的数据 -->
+	<select id="ListQuery" resultType="com.zhongcheng.entity.Customer">
+		select * from customer where customer.name not in ('无') limit #{arg0},10
+	</select>
+
+	<!-- 根据用户id查询用户资料 -->
+	<select id="UserIdQuery" resultType="com.zhongcheng.entity.Customer">
+		select * from Customer where Customerid=#{arg0}
+	</select>
+
+	<!-- 删除用户审核资料 -->
+	<update id="deletecus">
+		UPDATE customer set
+		name='无',sex='无',Idnumber='无',Banknumber='无',sesame=0,credit='无',Isnetloan='无',Phone='无',Marriage='无',Money=0,Usageofloan='无'
+		where customerid=#{arg0}
+	</update>
+	
+	<!-- 审核是否通过 -->
+	<update id="updateTong">
+		UPDATE customer set
+		name='无',sex='无',Idnumber='无',Banknumber='无',sesame=0,credit='无',Isnetloan='无',Phone='无',Marriage='无',Money=#{arg1},Usageofloan='无',isTong=#{arg2}
+		where customerid=#{arg0}
+	</update>
+	
+	<!-- 根据用户名查询用户是否贷款成功 -->
+	<select id="userphonequery" resultType="com.zhongcheng.entity.Customer">
+		select isTong,money from Customer where UserPhone=#{arg0}
+	</select>
+	
+	<!-- 查询总页数 -->
+	<select id="countquery" resultType="double">
+		select count(1)/10 from customer where customer.name not in ('无')
+	</select>
+	
+	<!-- 根据用户名查询用户 -->
+	<select id="Moquery" resultType="com.zhongcheng.entity.Customer">
+		select Customerid,DataTime,name,money,userPhone from Customer where UserPhone=#{userphone} and customer.name not in ('无')
+	</select>
+	
+	<!-- 验证账号是否注册 -->
+	<select id="blueruser" resultType="int">
+		select count(1) from customer where UserPhone=#{arg0}
+	</select>
+</mapper>
