@@ -15,40 +15,82 @@
             }
         }
         var userL = new userSta();
-        userL.usPd();
+        // userL.usPd();
         //举报
         document.getElementById("report").onclick = function () {
             location.href = "http://www.12315.cn/";
             //他这想要存进数据里面你再给整个表
             $.ajax();
         }
-        function tuijianList() {
-            var arry1 =
-                "急用钱请找我，无抵押，无担保。】最新口子， 大家速度撸起来， 无视黑白， 有身份证就能贷】海创汇 新口子来了 芝麻分550以上 实名手机三个月以上就可以撸】0 门槛！ 注册就有万元额度！ 3 分钟极速放款！ 速度上人！】原现金巴士回归放款， 无需芝麻分， 双黑可做】三步认证等结果就行了！ 要求低审核快通过率高！ 吃肉速度要跟上！】芝麻分550分以上， 本人实名手机号加本人实名淘宝， 就是说手机号加淘宝收货地址是你的常住地址基本就稳下】乐乐花！ 超低门槛！ 实名制手机号正常使用6个月以上！ 系统自动审核！】节节花芝麻分小额短期口子, 最高下款6000申请入口审核条件】手机号实名， 支付宝有花呗， 额度1500 - 10000！】芝麻分550只要没负面， 稳如发工资美滋滋！】不看负债， 人人放款1000起步， 最高5000， 无视征信！ 】依旧火爆的并且适合中介操作的两个卡种 】小花椒： 不查不上征信， 芝麻分口子， 最高可撸5000元！】无需芝麻分， 最高竟然可以申请20万， 老铁们】只要手机实名半年以上就能贷， 不上征信， 不要芝麻分！】节后恢复放款， 玖富10次贷， 人人15000！】30 分钟内放款， 最高5000， 不查征信不上征信！            】有芝麻分就可贷走1200至5000元， 稳如深夜工资！】有手机就能贷， 不查征信不上征信， 秒过秒到！            】中信大放水， 30 % 起提额妥妥， 捡漏的速度跟上！】无副作用， 立竿见影， 秒过秒到， 可撸1500！            】每日放款3000万！ 大额口子有车的， 有信用卡的……            】国庆福利， 国庆放假期间也放款的口子汇总， 老铁赶紧】最新无视黑白口子， 认证简单， 秒批， 秒到账500 - 3000 元            】国庆节口子放水不上征信！ 无视黑户一张身份证批3000额度】最高5000， 18 - 40 周岁， 有手机的就来领钱!】只要你有花呗就能拿钱， 不管你有多黑， 只要支付宝不黑就好！ ",
-                arry2 =
-                    "手机回收类口子，老哥们的最爱，只要芝麻分不低于570人人8000】热炒包提到账黑科技破解 最高下款30000申请入口审核条件介绍】    审核速度快，下载APP到放款到账全程2小时】    近期下款新口子，没做过的老哥，看这里】    有信用卡哪个网贷好下？这8个口子有信用卡必下！】    交通信用卡使用半年以上良好的，贷款、提额随意】    老口新发，无需芝麻分，老铁赶紧过来拿钱】    独家通道秒批工资，专治万年拒，老铁们赶紧过来了】    百分百下款的网贷口子大盘点！】    三款不错的口子，门槛低，想要贷款老哥千万不要错过】    无视负债的10种网贷！这些口子门槛低到你无法想象！】信用卡花呗自动回款码，大额4999可一笔过，六九金服】不查征信！不要花呗！纯机审神口来袭，芝麻分500可撸!",
-                arry3 =
-                    "国庆节口子放水不上征信！无视黑户一张身份证批3000额度】大白钱包，新口子，秒速放款，无逾期最高2w】无视一切的悟空招财，人人1000元，再不下手小心过时】高下款率信用卡口子，备胎信用，最高20000元】黑科技来袭，秒提工行额度！从1万到30万】彗星钱包：芝麻分590以上，下款很不错哦，经过实测已成】交通Y-Power信用卡又添新丁！】无逾期，秒到秒过，最高可达十万】兴业旗下老口子，最高可申请50000元，征信不错的老哥】pos机知识】全世界收农行信用卡，秒提固定额度】独家神卡偷渡渠道，秒批额度三万起步，大多5万】建行发卡15周年福利最高1500红包100%中奖",
-                arry4 =
-                    "2018年10月能下款的网贷口子66666】审核飞快秒通过，黑户必选口子！领工资要抓紧！】审核通过没回访就放款，没有芝麻分也可以申请！】0门槛！注册就有万元额度！3分钟极速放款！速度上人！】原现金巴士回归放款，无需芝麻分，双黑可做】不查不上征信，随机电话回访，最高8000】节节花芝麻分小额短期口子,最高下款6000申请入口审核条件】芝麻分550就可以秒下的贷款新网贷口子】晚上申请能下款的小贷口子 这5个有简单资料就能申请！】芝麻分只要580以上，手机号实名，支付宝有花呗就来!";
-
-            function splitList(arry, num) {
-                var c = "";
-                for (var i = 0; i < arry.length; i++) {
-                    c += "<li data-name=" +
-                        (i + 1) +
-                        "><a href='#'><div class='text'><h1>" +
-                        arry[i] +
-                        "</h1><p>6小时前 | 75206人在看</p></div></a></li>"
-                }
-                document.getElementsByClassName('conTab')[num - 1].innerHTML = c;
-            }
-            splitList(arry1.split('】'), 1);
-            splitList(arry2.split('】'), 2);
-            splitList(arry3.split('】'), 3);
-            splitList(arry4.split('】'), 4);
+        //随机数
+        function mathRandom(maxValue, minValue) {
+            this.choices = maxValue - minValue + 1;
+            this.minValue = minValue;
         }
-        tuijianList();
+        mathRandom.prototype = {
+            constructor : mathRandom,
+            mathReturn : function () {
+                return Math.floor(Math.random() * this.choices + this.minValue);
+            }
+        }
+        // function tuiJianList() {
+        //     var arry1 =
+        //         "急用钱请找我，无抵押，无担保。】最新口子， 大家速度撸起来， 无视黑白， 有身份证就能贷】海创汇 新口子来了 芝麻分550以上 实名手机三个月以上就可以撸】0 门槛！ 注册就有万元额度！ 3 分钟极速放款！ 速度上人！】原现金巴士回归放款， 无需芝麻分， 双黑可做】三步认证等结果就行了！ 要求低审核快通过率高！ 吃肉速度要跟上！】芝麻分550分以上， 本人实名手机号加本人实名淘宝， 就是说手机号加淘宝收货地址是你的常住地址基本就稳下】乐乐花！ 超低门槛！ 实名制手机号正常使用6个月以上！ 系统自动审核！】节节花芝麻分小额短期口子, 最高下款6000申请入口审核条件】手机号实名， 支付宝有花呗， 额度1500 - 10000！】芝麻分550只要没负面， 稳如发工资美滋滋！】不看负债， 人人放款1000起步， 最高5000， 无视征信！ 】依旧火爆的并且适合中介操作的两个卡种 】小花椒： 不查不上征信， 芝麻分口子， 最高可撸5000元！】无需芝麻分， 最高竟然可以申请20万， 老铁们】只要手机实名半年以上就能贷， 不上征信， 不要芝麻分！】节后恢复放款， 玖富10次贷， 人人15000！】30 分钟内放款， 最高5000， 不查征信不上征信！            】有芝麻分就可贷走1200至5000元， 稳如深夜工资！】有手机就能贷， 不查征信不上征信， 秒过秒到！            】中信大放水， 30 % 起提额妥妥， 捡漏的速度跟上！】无副作用， 立竿见影， 秒过秒到， 可撸1500！            】每日放款3000万！ 大额口子有车的， 有信用卡的……            】国庆福利， 国庆放假期间也放款的口子汇总， 老铁赶紧】最新无视黑白口子， 认证简单， 秒批， 秒到账500 - 3000 元            】国庆节口子放水不上征信！ 无视黑户一张身份证批3000额度】最高5000， 18 - 40 周岁， 有手机的就来领钱!】只要你有花呗就能拿钱， 不管你有多黑， 只要支付宝不黑就好！ ",
+        //         arry2 =
+        //             "手机回收类口子，老哥们的最爱，只要芝麻分不低于570人人8000】热炒包提到账黑科技破解 最高下款30000申请入口审核条件介绍】    审核速度快，下载APP到放款到账全程2小时】    近期下款新口子，没做过的老哥，看这里】    有信用卡哪个网贷好下？这8个口子有信用卡必下！】    交通信用卡使用半年以上良好的，贷款、提额随意】    老口新发，无需芝麻分，老铁赶紧过来拿钱】    独家通道秒批工资，专治万年拒，老铁们赶紧过来了】    百分百下款的网贷口子大盘点！】    三款不错的口子，门槛低，想要贷款老哥千万不要错过】    无视负债的10种网贷！这些口子门槛低到你无法想象！】信用卡花呗自动回款码，大额4999可一笔过，六九金服】不查征信！不要花呗！纯机审神口来袭，芝麻分500可撸!",
+        //         arry3 =
+        //             "国庆节口子放水不上征信！无视黑户一张身份证批3000额度】大白钱包，新口子，秒速放款，无逾期最高2w】无视一切的悟空招财，人人1000元，再不下手小心过时】高下款率信用卡口子，备胎信用，最高20000元】黑科技来袭，秒提工行额度！从1万到30万】彗星钱包：芝麻分590以上，下款很不错哦，经过实测已成】交通Y-Power信用卡又添新丁！】无逾期，秒到秒过，最高可达十万】兴业旗下老口子，最高可申请50000元，征信不错的老哥】pos机知识】全世界收农行信用卡，秒提固定额度】独家神卡偷渡渠道，秒批额度三万起步，大多5万】建行发卡15周年福利最高1500红包100%中奖",
+        //         arry4 =
+        //             "2018年10月能下款的网贷口子66666】审核飞快秒通过，黑户必选口子！领工资要抓紧！】审核通过没回访就放款，没有芝麻分也可以申请！】0门槛！注册就有万元额度！3分钟极速放款！速度上人！】原现金巴士回归放款，无需芝麻分，双黑可做】不查不上征信，随机电话回访，最高8000】节节花芝麻分小额短期口子,最高下款6000申请入口审核条件】芝麻分550就可以秒下的贷款新网贷口子】晚上申请能下款的小贷口子 这5个有简单资料就能申请！】芝麻分只要580以上，手机号实名，支付宝有花呗就来!",
+        //         date = new Date();
+        //     function dateMath(date, i) {
+        //         this.dateYear = date.getFullYear();
+        //         this.dateMonth = date.getMonth();
+        //         this.dateDay = date.getDate();
+        //         this.i = i;
+        //     }
+        //     dateMath.prototype = {
+        //         constructor: dateMath,
+        //         returnDate: function () {
+        //             return this.dateYear + "年" + (this.dateMonth + 1) + "月" + (parseInt(this.dateDay) - parseInt(this.i)) + "日";
+        //         }
+        //     }
+        //     function splitList(arry, num) {
+        //         var c = "",
+        //             b = 0,
+        //             dateS = "";
+        //         for (var i = 0; i < arry.length; i++) {
+        //             if (i % 5 == 0) {
+        //                 b++;
+        //                 dateS = new dateMath(date, b);
+        //             }
+        //             c += "<li data-name=" +
+        //                 (i + 1) +
+        //                 "><a href='#'><div class='text'><h1>" +
+        //                 arry[i] +
+        //                 "</h1><p>" + dateS.returnDate() + " | " + new mathRandom(99999,1000).mathReturn() + "人在看</p></div></a></li>"
+        //         }
+        //         document.getElementsByClassName('conTab')[num - 1].innerHTML = c;
+        //     }
+        //     splitList(arry1.split('】'), 1);
+        //     splitList(arry2.split('】'), 2);
+        //     splitList(arry3.split('】'), 3);
+        //     splitList(arry4.split('】'), 4);
+        // }
+        // tuiJianList();
+        // function wangDaiList() {
+        //     this.p = document.getElementsByClassName("math-random");
+        // }
+        // wangDaiList.prototype = {
+        //     constructor: wangDaiList,
+        //     DOMWangDai: function () {
+        //         for (let i = 0; i < this.p.length; i++) {
+        //             this.p[i].innerText = new mathRandom(1000, 99999).mathReturn() + "人已申请";
+        //             console.log(this.p[i]);
+        //         }
+        //     }
+        // }
+        // new wangDaiList().DOMWangDai();
         $('.userImg>.am-figure').removeClass(
             'am-figure-zoomable');
         $('.conTab li,#appendTolist li,.kp-list .btn')
@@ -72,6 +114,7 @@
                 })
         //vip付款页面
         //点击开通 VIP 事件
+        $('.pay').css("top",-$(".pay").height());
         $('.am-icon-vimeo').click(function () {
             $('.pay').addClass('posTop');
             $('.back').removeClass('am-hide');
@@ -79,6 +122,7 @@
         $('.payReturn').click(function () {
             $('.pay').removeClass('posTop');
             $('.back').addClass('am-hide');
+            $('.pay').css("top",-$(".pay").height());
         })
         $('.pay_true')
             .click(
@@ -93,6 +137,7 @@
         $('.pay_false').click(function () {
             $('.pay').removeClass('posTop');
             $('.back').addClass('am-hide');
+            $('.pay').css("top",-$(".pay").height());
         })
         // 点击价格选项 事件
         $('.pay_list li').click(function () {
@@ -112,26 +157,17 @@
                         .attr('data-name'),
                         title = document
                             .getElementsByClassName('index-title')[0];
-                    $('.content>.content-z')
-                        .addClass('am-hide');
+                    $('.content>.content-z').addClass('am-hide');
                     if (dataName == "user") {
                         var userLogin = userL.userLogin;
                         // 判断是否登录 
                         if (userLogin != undefined) {
                             ajaxQuery();
                             // 已登录显示个人中心
-                            $(
-                                '.swiper-container')
-                                .addClass(
-                                    'am-hide');
-                            $('#' + dataName)
-                                .removeClass(
-                                    'am-hide');
-                            $('.bottom-weizhi')
-                                .addClass(
-                                    'am-hide');
-                            document
-                                .getElementsByClassName("userName")[0].innerText = userLogin;
+                            $('.swiper-container').addClass('am-hide');
+                            $('#' + dataName).removeClass('am-hide');
+                            $('.bottom-weizhi').addClass('am-hide');
+                            document.getElementsByClassName("userName")[0].innerText = userLogin;
                             title.text = "个人中心";
 
                         } else {
